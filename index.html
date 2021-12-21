@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css" crossorigin="anonymous">
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZulFood</title>
+</head>
+<body>
+  
+<!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" href="#">ZulFood</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active mx-3" aria-current="page" href="#">Home</a>
+          <a class="nav-link mx-3" href="#menu">Menu</a>
+          <a><i class="las la-shopping-cart" id="btn" onclick="loadChart()"></i></a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- Akhir navbar -->]
+
+ <!-- Sidebar -->
+ 
+ <div class="sidebar" id="sidebar">
+   <div class="header">
+    <h5>Pesanan Saya</h1>
+      <p onclick="closeChart()">
+          <i class="las la-times" id="cancel"></i>
+      </p>
+   </div>
+   <div class="pesanan" id="pesanan">
+     <div class="food">
+       <div class="nama">Asparagus</div>
+       <div class="harga">50.000</div>
+     </div>
+   </div>
+</div>
+ <!-- Akhir sidebar -->
+
+  <!-- Landing page -->
+  <div class="container jumbotron">
+    <div class="row row-cover">
+      <div class="col-lg-7">
+        <img src="assets/cover.png" alt="makanan" width="700">
+      </div>
+      <div class="col-lg-4">
+        <h2 class="display-5 text-truncate text-cover">Zulrafli Food</h2>
+        <p class="my-4">
+          Zulrafli Food merupakan restoran terbaik yang ada di <strong>Indonesia</strong>. Terdapat banyak menu makanan yang disajikan, mulai dari makanan lokal samapai internasional.
+        </p>
+        <button class="btn btn-cover">Get Started</button>
+      </div>
+    </div>
+  </div>
+<!-- Akhir landing page -->
+
+<!-- Section menu -->
+  <div class="container" id="menu">
+    <div class="row text-center">
+      <div class="col">
+        <h2 class="display-5">Menu Makanan</h2>
+      </div>
+    </div>
+    <div class="row my-5">
+      <div class="col-sm-3">
+        <div class="card" style="width: 15rem;">
+          <img src="assets/asparagus.jpg" class="card-img-top" alt="asparagus">
+          <div class="card-body">
+            <h5 class="card-title">Asparagus</h5>
+            <p class="card-text">Rp. 50.000</p>
+            <a class="btn btn-primary" onclick="addToChart('Asparagus', 50000)">Pesan</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card" style="width: 15rem;">
+          <img src="assets/pizza.jpg" class="card-img-top" alt="pizza">
+          <div class="card-body">
+            <h5 class="card-title">Pizza</h5>
+            <p class="card-text">Rp. 60.000</p>
+            <a class="btn btn-primary" onclick="addToChart('Pizza', 60000)">Pesan</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card" style="width: 15rem;">
+          <img src="assets/smoked-beef.jpg" class="card-img-top" alt="beef">
+          <div class="card-body">
+            <h5 class="card-title">Smoked Beef</h5>
+            <p class="card-text">Rp. 120.000</p>
+            <a class="btn btn-primary" onclick="addToChart('Smoked Beef', 120000)">Pesan</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card" style="width: 15rem;">
+          <img src="assets/makaron.jpg" class="card-img-top" alt="makaron" height="160px">
+          <div class="card-body">
+            <h5 class="card-title">Makaron</h5>
+            <p class="card-text">Rp. 20.000</p>
+            <a class="btn btn-primary" onclick="addToChart('Makaron', 20000)">Pesan</a>
+          </div>
+        </div>
+      </div>     
+    </div>
+    <div class="row my-3">
+      <div class="col-sm-3">
+        <div class="card" style="width: 15rem;">
+          <img src="assets/telur.jpg" class="card-img-top" alt="endog">
+          <div class="card-body">
+            <h5 class="card-title">Telur Mata Sapi</h5>
+            <p class="card-text">Rp. 15.000</p>
+            <a class="btn btn-primary" onclick="addToChart('Telur', 15000)">Pesan</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card" style="width: 15rem;">
+          <img src="assets/waffle.jpg" class="card-img-top" alt="waffle" height="135px">
+          <div class="card-body">
+            <h5 class="card-title">Waffle</h5>
+            <p class="card-text">Rp. 30.000</p>
+            <a class="btn btn-primary" onclick="addToChart('Waffle', 30000)">Pesan</a>
+          </div>
+        </div>
+      </div>      
+      <div class="col-sm-3">
+        <div class="card" style="width: 15rem;">
+          <img src="assets/cake.jpg" class="card-img-top" alt="cake" height="140px">
+          <div class="card-body">
+            <h5 class="card-title">Cake</h5>
+            <p class="card-text">Rp. 80.000</p>
+            <a class="btn btn-primary" onclick="addToChart('Cake', 80000)">Pesan</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card" style="width: 15rem;">
+          <img src="assets/salad.jpg" class="card-img-top" alt="salad" height="140px">
+          <div class="card-body">
+            <h5 class="card-title">Gado-gado</h5>
+            <p class="card-text">Rp. 50.000</p>
+            <a class="btn btn-primary" onclick="addToChart('Gado-gado', 50000)">Pesan</a>
+          </div>
+        </div>
+      </div>      
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-center text-white mt-5">
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2021 Copyright:
+      <a class="text-white" href="https://github.com/muhzulraflii">Zulrafli</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Akhir Footer -->
+  <!-- JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+body {
+  position: relative;
+}
+
+.jumbotron {
+  width: 100%;
+  height: 640px;
+  background-color: white;
+  padding-top: 120px;
+}
+
+a .space {
+  margin-right: 15px !important;
+}
+
+.navbar {
+  background-color: white !important;
+  height: 70px;
+}
+
+.row-cover {
+  width: 100%;
+}
+
+.text-cover {
+  margin-top: 100px;
+  font-weight: 400;
+  color: #ff9d00;
+}
+
+.btn-cover {
+  background-color: none;
+  color: black;
+  font-weight: 500;
+  width: 300px;
+  height: 50px;
+  border: 2px solid black;
+  border-radius: 20px;
+}
+
+.btn-cover:hover {
+  background-color: #FFB641;
+  color: white;
+  border: 2px solid #FFB641;
+}
+
+.card:hover {
+  padding: 2px;
+  box-shadow: 1px 1px black 0.8;
+}
+
+.sidebar {
+  height: 900px;
+  width: 300px;
+  position: fixed;
+  top: 0;
+  right: -300px;
+  z-index: 100;
+  background-color: #ffecce;
+  transition: all .5s ease;
+  padding-top: 90px;
+}
+
+#check {
+  display: none;
+}
+
+#btn {
+  font-size: 40px;
+}
+
+#cancel {
+  font-size: 30px;
+}
+
+.tampil {
+  right: 0;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.pesanan {
+  padding: 30px;
+}
+
+.food {
+  display: flex;
+  flex-direction: row;
+}
+
+.nama {
+  font-weight: 600;
+  width: 150px;
+  margin-left: 10px;
+}
